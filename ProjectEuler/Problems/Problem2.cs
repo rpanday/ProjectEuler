@@ -25,17 +25,16 @@ namespace ProjectEuler.Problems
 			var firstNum = 1;
 			var secondNum = 2;
 
-			do
+			while (secondNum <= till)
 			{
-				var next = firstNum + secondNum;
-
 				if (secondNum % 2 == 0)
 					sum += secondNum;
 
+				var third = firstNum + secondNum;
 				firstNum = secondNum;
-				secondNum = next;
+				secondNum = third;
 
-			} while (secondNum <= till);
+			}
 
 			return sum;
 		}
